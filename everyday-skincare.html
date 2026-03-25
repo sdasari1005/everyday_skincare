@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everyday Skincare ✦ Science Meets Skin</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   EVERYDAY SKINCARE — QUIRKY PASTEL EDITION
+   Pantone Blue 2945 C as anchor
+   ═══════════════════════════════════════ */
+:root {
+  /* Pantone 2945 C = #003B8E → softened for pastel play */
+  --pb:   #003B8E;   /* Pantone Blue — anchor */
+  --pbl:  #1A5FAD;   /* Blue light */
+  --pbp:  #5B9BD5;   /* Blue pastel */
+  --pbx:  #A8C8F0;   /* Blue blush */
+  --pbg:  #D6E8FA;   /* Blue ghost */
+
+  /* Pastels — the quirky rainbow crew */
+  --lav:  #C5B4E3;   /* lavender */
+  --mint: #A8E6CF;   /* mint */
+  --blsh: #FFB7C5;   /* blush pink */
+  --pch:  #FFCBA4;   /* peach */
+  --ylw:  #FFE8A3;   /* butter yellow */
+  --lme:  #D4F0A0;   /* lime */
+  --sky:  #B8E8FF;   /* sky */
+
+  /* Bg / Text */
+  --cream: #FFFDF7;
+  --td: #0D1B2E;
+  --tm: #3A4E62;
+  --ts: #7A8EA0;
+
+  /* Gradients */
+  --ghero: linear-gradient(135deg, #003B8E 0%, #1A5FAD 45%, #5B9BD5 100%);
+  --gquirk: linear-gradient(145deg, #D6E8FA 0%, #E8D6F8 50%, #FFD6E8 100%);
+  --gpastel: linear-gradient(135deg, #C5B4E3 0%, #A8C8F0 40%, #A8E6CF 100%);
+
+  --fd: 'Instrument Serif', serif;
+  --fs: 'Libre Baskerville', serif;
+  --fb: 'Jost', sans-serif;
+
+  --rc: 20px;
+  --rw: 999px;  /* pill */
+  --ss: 0 8px 40px rgba(0,59,142,.10);
+  --sc: 0 4px 24px rgba(0,59,142,.08);
+}
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--cream);color:var(--td);overflow-x:hidden}
+
+/* ── SQUIGGLY DECO KEYFRAMES ── */
+@keyframes wobb{0%,100%{border-radius:60% 40% 55% 45%/50% 60% 40% 50%}33%{border-radius:40% 60% 45% 55%/60% 40% 55% 45%}66%{border-radius:55% 45% 60% 40%/45% 55% 50% 50%}}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pop{0%{transform:scale(0.8)}60%{transform:scale(1.08)}100%{transform:scale(1)}}
+@keyframes mqani{to{transform:translateX(-50%)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* Floating blobs decoration */
+.blob{position:absolute;pointer-events:none;border-radius:60% 40% 55% 45%/50% 60% 40% 50%;animation:wobb 8s ease-in-out infinite,float 6s ease-in-out infinite;opacity:.45;z-index:0}
+
+/* ── ANNOUNCEMENT ── */
+.ann{
+  background:var(--pb);
+  text-align:center;padding:11px 20px;
+  font-size:11.5px;letter-spacing:2px;font-weight:600;text-transform:uppercase;
+  color:rgba(255,255,255,.9);
+  position:relative;overflow:hidden;
+}
+.ann::before{content:'✿ ✦ ✿';position:absolute;left:20px;top:50%;transform:translateY(-50%);opacity:.35;letter-spacing:6px}
+.ann::after{content:'✿ ✦ ✿';position:absolute;right:20px;top:50%;transform:translateY(-50%);opacity:.35;letter-spacing:6px}
+.ann b{color:var(--ylw)}
+.ann s{color:rgba(255,255,255,.3);margin:0 10px;text-decoration:none}
+.hide-mob{}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,253,247,.95);
+  backdrop-filter:blur(20px);
+  border-bottom:2px solid var(--pbg);
+  padding:0 6%;
+}
+.ni{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.lm{
+  width:44px;height:44px;
+  background:var(--pb);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:4px 4px 0 var(--pbx);
+  border-radius:12px;
+  transition:transform .2s,box-shadow .2s;
+}
+.lm:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--pbx)}
+.ltg{display:flex;flex-direction:column;line-height:1}
+.ln{
+  font-family:var(--fd);font-size:20px;color:var(--pb);
+  letter-spacing:-.3px;
+}
+.lt{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--ts);font-weight:600;margin-top:3px}
+.nl{display:flex;align-items:center;gap:28px;list-style:none}
+.nl a{
+  text-decoration:none;font-size:13px;font-weight:600;color:var(--tm);
+  padding:4px 10px;border-radius:8px;
+  position:relative;transition:all .2s;letter-spacing:.2px;
+}
+.nl a:hover{color:var(--pb);background:var(--pbg)}
+.na{display:flex;align-items:center;gap:10px}
+.ib{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--pbg);border:1.5px solid var(--pbx);
+  cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;
+  transition:all .2s;
+}
+.ib:hover{background:var(--pbx);transform:scale(1.1) rotate(-5deg)}
+.cp{
+  background:var(--pb);color:#fff;border:none;
+  border-radius:var(--rw);padding:10px 22px;
+  font-size:13px;font-weight:700;font-family:var(--fb);cursor:pointer;
+  display:flex;align-items:center;gap:8px;
+  box-shadow:3px 3px 0 var(--pbp);
+  transition:transform .2s,box-shadow .2s;letter-spacing:.3px;
+}
+.cp:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--pbp)}
+
+/* ── HERO ── */
+.hero{
+  min-height:92vh;position:relative;overflow:hidden;
+  display:flex;align-items:center;
+  background:var(--cream);
+}
+/* Pastel blob bg */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 55% 55% at 15% 20%, rgba(197,180,227,.4) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 50% at 85% 75%, rgba(168,230,207,.35) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 45% at 70% 15%, rgba(168,200,240,.35) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 40% 85%, rgba(255,200,164,.3) 0%, transparent 55%);
+}
+.blob1{width:340px;height:340px;background:rgba(197,180,227,.3);top:-60px;left:-80px;animation-delay:0s}
+.blob2{width:260px;height:260px;background:rgba(168,230,207,.25);bottom:40px;left:20%;animation-delay:-3s}
+.blob3{width:300px;height:300px;background:rgba(255,183,197,.2);top:10%;right:-60px;animation-delay:-1.5s}
+.hi{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:center;
+  width:100%;padding:80px 6%;
+}
+/* Quirky badge */
+.hbg{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--ylw);
+  color:var(--td);
+  padding:8px 18px;border-radius:var(--rw);
+  font-size:10.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:24px;width:fit-content;
+  box-shadow:3px 3px 0 rgba(0,0,0,.12);
+  animation:rise .7s ease both,pop .5s .7s ease both;
+}
+.hbg .dot{width:7px;height:7px;border-radius:50%;background:var(--pb);animation:blink 1.8s ease-in-out infinite}
+.hh{
+  font-family:var(--fd);
+  font-size:clamp(48px,5.8vw,80px);
+  line-height:1.06;margin-bottom:20px;
+  animation:rise .8s .1s ease both;
+}
+.hh .ld{color:var(--td);display:block}
+.hh .lc{
+  display:inline-block;
+  color:var(--pb);
+  position:relative;
+}
+.hh .lc::after{
+  content:'';position:absolute;bottom:-2px;left:0;right:0;height:6px;
+  background:var(--ylw);z-index:-1;border-radius:3px;
+}
+.hh em{font-style:italic;color:var(--pb)}
+.hh em.lc{
+  font-style:italic;color:var(--pb);
+}
+.hs{font-size:16px;color:var(--tm);line-height:1.75;max-width:430px;margin-bottom:40px;font-weight:300;animation:rise .8s .2s ease both}
+.hc{display:flex;gap:12px;flex-wrap:wrap;animation:rise .8s .3s ease both}
+/* Primary quirky btn */
+.bg{
+  background:var(--pb);color:#fff;border:none;
+  padding:15px 34px;border-radius:var(--rw);
+  font-size:14px;font-weight:700;cursor:pointer;
+  text-decoration:none;display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--fb);letter-spacing:.3px;
+  box-shadow:4px 4px 0 var(--pbp);
+  transition:transform .2s,box-shadow .2s;
+}
+.bg:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--pbp)}
+/* Soft outline btn */
+.bs{
+  background:transparent;color:var(--pb);
+  border:2px solid var(--pb);
+  padding:15px 34px;border-radius:var(--rw);
+  font-size:14px;font-weight:600;cursor:pointer;
+  text-decoration:none;display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--fb);
+  transition:all .2s;
+}
+.bs:hover{background:var(--pbg);box-shadow:4px 4px 0 var(--pbx)}
+.hst{display:flex;gap:36px;margin-top:48px;padding-top:32px;border-top:2px dashed rgba(0,59,142,.15);animation:rise .8s .4s ease both}
+.hst .n{font-family:var(--fd);font-size:34px;color:var(--pb);line-height:1}
+.hst .l{font-size:10px;color:var(--ts);letter-spacing:2.5px;text-transform:uppercase;margin-top:5px;font-weight:500}
+
+/* Hero product cards */
+.hp{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:16px;animation:rise .8s .2s ease both}
+.hpc{
+  background:#fff;
+  border:2px solid var(--pbg);
+  border-radius:18px;padding:22px 16px 18px;
+  display:flex;flex-direction:column;align-items:center;text-align:center;
+  cursor:pointer;position:relative;
+  transition:transform .25s,box-shadow .25s;
+  box-shadow:4px 4px 0 var(--pbg);
+  overflow:hidden;
+}
+.hpc:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--pbx)}
+.hpc.tall{
+  grid-column:1;grid-row:1/3;
+  background:var(--pb);
+  border:2px solid var(--pbl);
+  box-shadow:5px 5px 0 var(--pbp);
+}
+.hpc.tall:hover{transform:translate(-5px,-5px);box-shadow:9px 9px 0 var(--pbp)}
+.hpc.tall .hcat{color:rgba(255,255,255,.65)}.hpc.tall .hnm{color:#fff}.hpc.tall .hpr{color:var(--ylw)}
+.hpbg{
+  position:absolute;top:12px;right:12px;
+  background:var(--blsh);color:var(--td);
+  font-size:9px;font-weight:800;letter-spacing:.8px;
+  padding:4px 10px;border-radius:var(--rw);text-transform:uppercase;
+  box-shadow:2px 2px 0 rgba(0,0,0,.1);
+}
+.hsvg{width:100%;height:130px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.hpc.tall .hsvg{height:185px}
+.hcat{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ts);font-weight:700;margin-bottom:4px}
+.hnm{font-family:var(--fd);font-size:16px;color:var(--td);margin-bottom:6px;line-height:1.25}
+.hpr{font-size:15px;font-weight:800;color:var(--pb)}
+
+/* ── MARQUEE ── */
+.mq{
+  padding:14px 0;overflow:hidden;white-space:nowrap;
+  background:var(--pb);
+  border-top:3px solid var(--pbl);border-bottom:3px solid var(--pbl);
+  position:relative;
+}
+.mqt{display:inline-flex;animation:mqani 26s linear infinite}
+.mqi{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:0 24px;font-size:11.5px;letter-spacing:2.5px;
+  text-transform:uppercase;color:rgba(255,255,255,.85);font-weight:600;
+}
+.mqd{width:5px;height:5px;border-radius:50%;background:var(--ylw);flex-shrink:0}
+
+/* ── SECTION HEADER ── */
+.sh{text-align:center;margin-bottom:60px}
+/* Quirky pill tag */
+.st{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:10.5px;font-weight:800;letter-spacing:3px;text-transform:uppercase;
+  color:var(--pb);margin-bottom:14px;
+  background:var(--pbg);border:2px solid var(--pbx);
+  padding:6px 18px;border-radius:var(--rw);
+}
+.sti{
+  font-family:var(--fd);
+  font-size:clamp(30px,4vw,54px);
+  line-height:1.1;margin-bottom:14px;color:var(--td);
+}
+.sti em{
+  font-style:italic;color:var(--pb);
+  position:relative;display:inline-block;
+}
+.sti em::after{
+  content:'';position:absolute;bottom:0;left:-4px;right:-4px;height:8px;
+  background:var(--ylw);z-index:-1;border-radius:4px;opacity:.8;
+}
+.sd{font-size:15px;color:var(--tm);line-height:1.75;max-width:520px;margin:0 auto;font-weight:300}
+
+/* ── CATEGORIES ── */
+.cats{padding:100px 6%;background:var(--cream);position:relative}
+/* Scattered blob deco */
+.cats::before{
+  content:'';position:absolute;width:200px;height:200px;border-radius:50%;
+  background:rgba(197,180,227,.2);top:-60px;right:5%;pointer-events:none;
+}
+.cg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.cc{
+  border-radius:24px;overflow:hidden;position:relative;cursor:pointer;
+  aspect-ratio:3/4;
+  transition:transform .35s cubic-bezier(.25,.46,.45,.94),box-shadow .35s;
+  box-shadow:5px 5px 0 var(--pbg),0 8px 30px rgba(0,0,0,.08);
+  border:2px solid var(--pbg);
+}
+.cc:hover{transform:translate(-4px,-4px) rotate(-1deg);box-shadow:9px 9px 0 var(--pbx)}
+.cc:hover .cim{transform:scale(1.04)}
+.cim{width:100%;height:100%;position:relative;transition:transform .5s ease}
+.co{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,22,40,.88) 0%,rgba(10,22,40,.05) 55%,transparent 100%);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:34px 30px;
+}
+.cch{
+  font-size:9.5px;letter-spacing:3.5px;text-transform:uppercase;
+  color:rgba(255,255,255,.6);font-weight:700;margin-bottom:6px;
+}
+.cn{font-family:var(--fd);font-size:34px;color:#fff;line-height:1;margin-bottom:10px}
+.cdc{font-size:13px;color:rgba(255,255,255,.72);line-height:1.6;margin-bottom:20px;font-weight:300}
+.cl{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.18);color:#fff;
+  font-size:12.5px;font-weight:700;text-decoration:none;
+  padding:9px 18px;border-radius:var(--rw);
+  border:1.5px solid rgba(255,255,255,.3);
+  width:fit-content;transition:all .2s;letter-spacing:.3px;
+}
+.cl:hover{background:rgba(255,255,255,.28);gap:12px}
+.cm .cim{background:linear-gradient(150deg,#001933 0%,#003B8E 50%,#1A5FAD 100%)}
+.cw .cim{background:linear-gradient(150deg,#2D1060 0%,#6B48C0 50%,#A08AE0 100%)}
+.cb .cim{background:linear-gradient(150deg,#0A2E1A 0%,#1A7A4A 50%,#50B880 100%)}
+
+/* ── FEATURES ── */
+.feats{
+  padding:72px 6%;
+  background:var(--pb);
+  position:relative;overflow:hidden;
+}
+.feats::before{
+  content:'✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦';
+  position:absolute;top:12px;left:0;right:0;text-align:center;
+  font-size:10px;color:rgba(255,255,255,.1);letter-spacing:12px;pointer-events:none;
+}
+.feats::after{
+  content:'✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦ ✦';
+  position:absolute;bottom:12px;left:0;right:0;text-align:center;
+  font-size:10px;color:rgba(255,255,255,.1);letter-spacing:12px;pointer-events:none;
+}
+.fg{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.fi2{
+  text-align:center;padding:32px 16px 28px;
+  background:rgba(255,255,255,.08);
+  border:1.5px solid rgba(255,255,255,.15);
+  border-radius:20px;
+  transition:transform .3s,background .3s;
+  position:relative;
+}
+.fi2:hover{transform:translateY(-6px) rotate(1deg);background:rgba(255,255,255,.14)}
+/* each card different pastel tint on hover via nth-child */
+.fi2:nth-child(1){border-top:4px solid var(--lav)}
+.fi2:nth-child(2){border-top:4px solid var(--mint)}
+.fi2:nth-child(3){border-top:4px solid var(--ylw)}
+.fi2:nth-child(4){border-top:4px solid var(--blsh)}
+.fic{
+  width:60px;height:60px;border-radius:16px;
+  background:rgba(255,255,255,.15);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 16px;font-size:26px;
+  border:1.5px solid rgba(255,255,255,.2);
+}
+.fit{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+.fid{font-size:12.5px;color:rgba(255,255,255,.65);line-height:1.65;font-weight:300}
+
+/* ── PRODUCTS ── */
+.prods{
+  padding:100px 6%;
+  background:linear-gradient(170deg, #F8FAFF 0%, var(--cream) 50%, #FFF8F5 100%);
+}
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:52px;flex-wrap:wrap}
+.tab{
+  padding:11px 26px;border-radius:var(--rw);
+  border:2px solid var(--pbx);
+  background:#fff;font-size:13px;font-weight:700;
+  color:var(--tm);cursor:pointer;font-family:var(--fb);
+  letter-spacing:.2px;
+  box-shadow:3px 3px 0 var(--pbg);
+  transition:all .2s;
+}
+.tab.active,.tab:hover{
+  background:var(--pb);color:#fff;
+  border-color:var(--pb);
+  box-shadow:4px 4px 0 var(--pbp);
+  transform:translate(-2px,-2px);
+}
+.pg{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.pc{
+  background:#fff;border-radius:22px;overflow:hidden;cursor:pointer;
+  position:relative;border:2px solid var(--pbg);
+  transition:transform .3s,box-shadow .3s;
+  box-shadow:4px 4px 0 var(--pbg);
+}
+.pc:hover{transform:translate(-5px,-5px);box-shadow:9px 9px 0 var(--pbx)}
+/* Alternate pastel card accents */
+.pc:nth-child(4n+1){border-top:4px solid var(--lav)}
+.pc:nth-child(4n+2){border-top:4px solid var(--mint)}
+.pc:nth-child(4n+3){border-top:4px solid var(--blsh)}
+.pc:nth-child(4n+4){border-top:4px solid var(--ylw)}
+.pi{position:relative;height:210px;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:28px 18px 0}
+.pib{position:absolute;inset:0}
+.pb{padding:18px 20px 22px}
+.pbg{
+  position:absolute;top:12px;left:12px;
+  padding:5px 12px;border-radius:var(--rw);
+  font-size:9.5px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
+  box-shadow:2px 2px 0 rgba(0,0,0,.1);
+}
+.bb{background:var(--pch);color:var(--td)}
+.bn{background:var(--sky);color:var(--td)}
+.bsl{background:var(--blsh);color:var(--td)}
+.ps{font-size:13px;letter-spacing:1px;margin-bottom:4px}
+.pct{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;font-weight:800;margin-bottom:5px}
+.pn{font-family:var(--fd);font-size:17px;color:var(--td);margin-bottom:6px;line-height:1.25}
+.pd{font-size:12px;color:var(--ts);line-height:1.6;margin-bottom:14px;font-weight:300}
+.pf{display:flex;align-items:center;justify-content:space-between}
+.pp{font-size:16px;font-weight:800;color:var(--pb)}
+.pp .o{font-size:12px;text-decoration:line-through;color:var(--ts);font-weight:400;margin-right:4px}
+.ab{
+  width:38px;height:38px;border-radius:50%;
+  background:var(--pb);color:#fff;border:none;cursor:pointer;
+  font-size:20px;font-weight:300;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:3px 3px 0 var(--pbp);
+  transition:transform .2s,box-shadow .2s;
+}
+.ab:hover{transform:rotate(90deg) scale(1.15);box-shadow:5px 5px 0 var(--pbp)}
+
+/* ── INGREDIENTS ── */
+.ingr{
+  padding:100px 6%;
+  background:linear-gradient(160deg,#EDF5FF 0%,#F5EEFF 50%,#EEFFF8 100%);
+  position:relative;overflow:hidden;
+}
+.ingr::before{content:'';position:absolute;width:300px;height:300px;
+  background:rgba(197,180,227,.2);border-radius:60% 40% 55% 45%/50% 60% 40% 50%;
+  bottom:-80px;right:-60px;animation:wobb 10s ease-in-out infinite;pointer-events:none}
+.ii{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.il{display:flex;flex-direction:column;gap:16px;margin-bottom:36px}
+.iitem{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:16px 18px;border-radius:16px;
+  background:#fff;border:2px solid var(--pbg);
+  box-shadow:4px 4px 0 var(--pbg);
+  transition:transform .25s,box-shadow .25s;
+}
+.iitem:nth-child(1){border-left:4px solid var(--ylw)}
+.iitem:nth-child(2){border-left:4px solid var(--blsh)}
+.iitem:nth-child(3){border-left:4px solid var(--mint)}
+.iitem:nth-child(4){border-left:4px solid var(--lav)}
+.iitem:hover{transform:translate(-4px,-4px);box-shadow:8px 8px 0 var(--pbx)}
+.iic{
+  width:48px;height:48px;border-radius:12px;
+  background:var(--pbg);border:1.5px solid var(--pbx);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.inn{font-size:14.5px;font-weight:700;color:var(--td);margin-bottom:3px}
+.ind{font-size:12.5px;color:var(--tm);line-height:1.65;font-weight:300}
+
+/* ── TESTIMONIALS ── */
+.test{
+  padding:100px 6%;
+  background:var(--cream);
+  position:relative;overflow:hidden;
+  border-top:3px dashed var(--pbg);
+}
+/* Big quote decoration */
+.test::before{
+  content:'"';font-family:var(--fd);font-size:600px;
+  position:absolute;top:-200px;left:-40px;
+  color:rgba(0,59,142,.04);line-height:1;pointer-events:none;
+}
+.torb{position:absolute;border-radius:50%;pointer-events:none}
+.to1{width:280px;height:280px;top:-40px;right:8%;background:rgba(197,180,227,.15);animation:float 7s ease-in-out infinite}
+.to2{width:180px;height:180px;bottom:60px;left:4%;background:rgba(168,230,207,.2);animation:float 9s ease-in-out infinite .5s}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tc{
+  background:#fff;
+  border:2px solid var(--pbg);
+  border-radius:22px;padding:32px;
+  box-shadow:5px 5px 0 var(--pbg);
+  transition:transform .3s,box-shadow .3s;
+  position:relative;
+}
+.tc:nth-child(1){border-top:4px solid var(--lav)}
+.tc:nth-child(2){border-top:4px solid var(--blsh);margin-top:20px}
+.tc:nth-child(3){border-top:4px solid var(--mint)}
+.tc:hover{transform:translate(-4px,-4px);box-shadow:9px 9px 0 var(--pbx)}
+.tst{font-size:15px;letter-spacing:1.5px;margin-bottom:16px}
+.tt{font-family:var(--fs);font-size:16px;font-style:italic;color:var(--tm);line-height:1.72;margin-bottom:24px}
+.ta{display:flex;align-items:center;gap:12px}
+.tav{width:46px;height:46px;border-radius:50%;overflow:hidden;border:2.5px solid var(--pbx);flex-shrink:0}
+.tname{font-size:13.5px;font-weight:700;color:var(--td);margin-bottom:1px}
+.tloc{font-size:11.5px;color:var(--ts)}
+.tver{font-size:9.5px;color:var(--pb);letter-spacing:1px;text-transform:uppercase;margin-top:2px;font-weight:700}
+
+/* ── ABOUT ── */
+.abt{
+  padding:100px 6%;
+  background:linear-gradient(160deg,#EDF5FF 0%,var(--cream) 60%,#FFF5F8 100%);
+  display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+}
+.avi{border-radius:24px;overflow:hidden;box-shadow:8px 8px 0 var(--pbg),0 20px 50px rgba(0,59,142,.08)}
+.ap{font-size:15px;color:var(--tm);line-height:1.82;margin-bottom:18px;font-weight:300}
+.avl{display:flex;gap:28px;margin:32px 0;flex-wrap:wrap}
+.av{
+  text-align:center;background:#fff;border:2px solid var(--pbg);
+  border-radius:16px;padding:18px 24px;
+  box-shadow:4px 4px 0 var(--pbg);
+}
+.av .vn{font-family:var(--fd);font-size:36px;color:var(--pb);line-height:1}
+.av .vl{font-size:10px;color:var(--ts);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-top:4px}
+
+/* ── NEWSLETTER ── */
+.nl2{
+  padding:88px 6%;text-align:center;
+  position:relative;overflow:hidden;
+  background:var(--pb);
+  border-top:4px solid var(--pbl);
+}
+.nl2::before{
+  content:'';position:absolute;
+  top:-50%;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.06) 0%,transparent 65%);
+}
+/* Confetti dots */
+.nl2::after{
+  content:'· · ✦ · · ✿ · · ✦ · · ✿ · · ✦ · · ✿ · ·';
+  position:absolute;bottom:16px;left:0;right:0;text-align:center;
+  font-size:12px;color:rgba(255,255,255,.15);letter-spacing:8px;pointer-events:none;
+}
+.nl2 h2{font-family:var(--fd);font-size:50px;color:#fff;margin-bottom:12px;position:relative;z-index:1}
+.nl2 h2 em{font-style:italic;color:var(--ylw)}
+.nl2 p{color:rgba(255,255,255,.65);font-size:15px;font-weight:300;margin-bottom:36px;position:relative;z-index:1}
+.nlf{display:flex;gap:10px;max-width:500px;margin:0 auto;position:relative;z-index:1}
+.nlf input{
+  flex:1;padding:14px 22px;border-radius:var(--rw);
+  border:2px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.12);color:#fff;
+  font-size:14px;outline:none;font-family:var(--fb);
+  transition:border-color .3s,background .3s;
+}
+.nlf input::placeholder{color:rgba(255,255,255,.45)}
+.nlf input:focus{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.2)}
+.nlf button{
+  padding:14px 30px;background:var(--ylw);color:var(--td);
+  border:none;border-radius:var(--rw);font-weight:800;font-size:14px;cursor:pointer;
+  font-family:var(--fb);white-space:nowrap;
+  box-shadow:3px 3px 0 rgba(0,0,0,.15);
+  transition:transform .2s,box-shadow .2s;
+}
+.nlf button:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 rgba(0,0,0,.2)}
+
+/* ── FOOTER ── */
+footer{
+  background:#040F1E;
+  padding:80px 6% 32px;color:rgba(255,255,255,.5);
+  border-top:4px solid var(--pb);
+}
+.fg2{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:28px}
+.fba .ln{color:#fff;font-size:22px}
+.fba .lt{color:rgba(255,255,255,.3)}
+.fab{font-size:13.5px;line-height:1.82;margin:16px 0 24px;font-weight:300}
+.fso{display:flex;gap:10px}
+.sb{
+  width:38px;height:38px;border-radius:10px;
+  border:1.5px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.04);
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;cursor:pointer;text-decoration:none;
+  color:rgba(255,255,255,.5);
+  transition:all .2s;
+}
+.sb:hover{background:var(--pb);border-color:var(--pbl);transform:translateY(-3px) rotate(-5deg)}
+.fc h4{font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:20px}
+.fc ul{list-style:none}
+.fc ul li{margin-bottom:10px}
+.fc ul li a{text-decoration:none;font-size:13px;color:rgba(255,255,255,.45);transition:color .2s;font-weight:300}
+.fc ul li a:hover{color:var(--pbx)}
+.fbt{display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.fbt a{color:rgba(255,255,255,.28);text-decoration:none;margin-left:18px;transition:color .2s}
+.fbt a:hover{color:var(--pbx)}
+
+/* ── ANIM ── */
+.fi{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease}
+.fi.vis{opacity:1;transform:translateY(0)}
+
+/* ── HAMBURGER BUTTON ── */
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;border-radius:10px;transition:background .2s;z-index:1001}
+.ham:hover{background:var(--pbg)}
+.ham span{display:block;width:22px;height:2.5px;background:var(--pb);border-radius:2px;transition:transform .3s,opacity .3s}
+.ham.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ── MOBILE MENU OVERLAY ── */
+.mob-menu{display:none;position:fixed;inset:0;z-index:998;background:rgba(255,253,247,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:0;padding:80px 24px 40px;overflow-y:auto}
+.mob-menu.open{display:flex}
+.mob-menu .mm-link{display:block;font-family:var(--fd);font-size:26px;color:var(--td);text-decoration:none;padding:14px 0;text-align:center;border-bottom:2px dashed rgba(0,59,142,.12);width:100%;max-width:320px;transition:color .2s}
+.mob-menu .mm-link:hover{color:var(--pb)}
+.mob-cta{margin-top:28px;background:var(--pb);color:#fff;border:none;border-radius:var(--rw);padding:16px 48px;font-size:16px;font-weight:800;cursor:pointer;font-family:var(--fb);box-shadow:4px 4px 0 var(--pbp);width:100%;max-width:320px}
+
+/* ── TABLET 1100px ── */
+@media(max-width:1100px){
+  .hi{grid-template-columns:1fr;padding:64px 6% 48px}
+  .hp{max-width:500px;margin:0 auto}
+  .cg{grid-template-columns:repeat(3,1fr)}
+  .pg{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:repeat(2,1fr)}
+  .ii,.abt{grid-template-columns:1fr;gap:48px}
+  .tg{grid-template-columns:1fr 1fr;gap:20px}
+  .fg2{grid-template-columns:1fr 1fr;gap:36px}
+}
+
+/* ── MOBILE 768px ── */
+@media(max-width:768px){
+  .nl{display:none}
+  .na{display:none}
+  .ham{display:flex}
+  .ni{height:64px}
+  .ln{font-size:17px}
+  .lt{display:none}
+  .ann{font-size:10px;letter-spacing:1px;padding:9px 12px}
+  .ann::before,.ann::after{display:none}
+  .hero{min-height:auto}
+  .hi{grid-template-columns:1fr;padding:44px 5% 36px;gap:36px}
+  .hbg{font-size:9.5px;letter-spacing:2px;padding:7px 16px;margin-bottom:20px}
+  .hh{font-size:clamp(36px,9.5vw,52px);margin-bottom:16px}
+  .hs{font-size:14.5px;margin-bottom:28px;max-width:100%}
+  .hc{gap:12px}
+  .bg,.bs{padding:14px 26px;font-size:13.5px}
+  .hst{gap:24px;margin-top:32px;padding-top:24px}
+  .hst .n{font-size:24px}
+  .hst .l{font-size:9.5px}
+  .hp{display:flex;flex-direction:row;overflow-x:auto;gap:12px;max-width:100%;padding-bottom:12px;-webkit-overflow-scrolling:touch;scrollbar-width:none;scroll-snap-type:x mandatory}
+  .hp::-webkit-scrollbar{display:none}
+  .hpc{min-width:155px;flex-shrink:0;border-radius:18px;padding:18px 12px 16px;scroll-snap-align:start}
+  .hpc.tall{min-width:170px;grid-column:unset;grid-row:unset}
+  .hsvg{height:100px}
+  .hpc.tall .hsvg{height:120px}
+  .hnm{font-size:13.5px}
+  .hpr{font-size:13px}
+  .mq{padding:11px 0}
+  .mqi{font-size:10px;letter-spacing:1.8px;padding:0 18px}
+  .sh{margin-bottom:40px}
+  .sti{font-size:clamp(24px,7vw,36px)}
+  .sd{font-size:14px}
+  .st{font-size:10px;letter-spacing:3px}
+  .cats{padding:60px 5%}
+  .cg{grid-template-columns:1fr;gap:16px;max-width:440px;margin:0 auto}
+  .cc{aspect-ratio:4/3}
+  .cn{font-size:28px}
+  .cdc{font-size:12.5px;margin-bottom:16px}
+  .co{padding:28px 26px}
+  .feats{padding:48px 5%}
+  .fg{grid-template-columns:repeat(2,1fr);gap:12px}
+  .fi2{padding:22px 12px}
+  .fic{width:50px;height:50px;font-size:22px;border-radius:14px;margin-bottom:12px}
+  .fit{font-size:13px}
+  .fid{font-size:12px}
+  .prods{padding:60px 5%}
+  .tabs{gap:8px;justify-content:flex-start;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:10px 18px;font-size:12.5px;white-space:nowrap;flex-shrink:0}
+  .pg{grid-template-columns:repeat(2,1fr);gap:14px}
+  .pi{height:175px;padding:22px 14px 0}
+  .pb{padding:16px 16px 20px}
+  .pn{font-size:15px}
+  .pd{font-size:11.5px;margin-bottom:10px}
+  .pp{font-size:15px}
+  .ab{width:36px;height:36px;font-size:18px}
+  .ingr{padding:60px 5%}
+  .ii{grid-template-columns:1fr;gap:32px}
+  .iitem{padding:14px 16px}
+  .iic{width:44px;height:44px;font-size:20px;border-radius:12px}
+  .inn{font-size:14px}
+  .ind{font-size:12.5px}
+  .ii > div:last-child{display:none}
+  .test{padding:60px 5%}
+  .tg{grid-template-columns:1fr;gap:14px}
+  .tc:nth-child(2){margin-top:0}
+  .tc{padding:24px}
+  .tt{font-size:15px;margin-bottom:20px}
+  .tst{font-size:13px}
+  .abt{padding:60px 5%;grid-template-columns:1fr;gap:32px}
+  .avi svg{max-height:300px}
+  .ap{font-size:14.5px;margin-bottom:16px}
+  .avl{gap:14px}
+  .av .vn{font-size:30px}
+  .av .vl{font-size:10.5px}
+  .nl2{padding:56px 5%}
+  .nl2 h2{font-size:30px}
+  .nl2 p{font-size:14px;margin-bottom:28px}
+  .nlf{flex-direction:column;gap:10px;max-width:100%}
+  .nlf input,.nlf button{width:100%;border-radius:14px}
+  footer{padding:48px 5% 28px}
+  .fg2{grid-template-columns:1fr 1fr;gap:28px}
+  .fba{grid-column:1/-1;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:24px}
+  .fbt{flex-direction:column;gap:12px;text-align:center;font-size:11.5px}
+  .fbt div{display:flex;flex-wrap:wrap;justify-content:center}
+  .fbt a{margin-left:0;margin:0 8px}
+}
+
+/* ── SMALL MOBILE 480px ── */
+@media(max-width:480px){
+  .hi{padding:36px 4% 28px}
+  .hh{font-size:clamp(30px,9vw,42px)}
+  .hc{flex-direction:column;align-items:flex-start}
+  .bg,.bs{width:100%;justify-content:center;padding:14px 20px}
+  .hst{gap:16px}
+  .hst .n{font-size:20px}
+  .hst .l{font-size:9px}
+  .hpc{min-width:138px}
+  .hpc.tall{min-width:152px}
+  .cg{max-width:100%}
+  .cc{aspect-ratio:3/4;max-height:360px}
+  .tabs{gap:6px}
+  .tab{padding:9px 14px;font-size:12px}
+  .pg{grid-template-columns:1fr 1fr;gap:10px}
+  .pi{height:155px;padding:16px 10px 0}
+  .pb{padding:12px 12px 16px}
+  .pn{font-size:14px}
+  .ps{font-size:11px}
+  .pp{font-size:14px}
+  .pp .o{font-size:11px}
+  .pbg{font-size:8.5px;padding:4px 10px;top:10px;left:10px}
+  .fg{grid-template-columns:1fr 1fr;gap:10px}
+  .fi2{padding:16px 10px}
+  .fic{width:44px;height:44px;font-size:20px}
+  .fit{font-size:12.5px}
+  .fid{font-size:11.5px}
+  .tg{grid-template-columns:1fr}
+  .tc{padding:20px}
+  .tt{font-size:14px}
+  .nl2 h2{font-size:24px}
+  .nlf input,.nlf button{padding:14px 20px;font-size:13.5px}
+  .fg2{grid-template-columns:1fr}
+  .fba{grid-column:1}
+  .fc h4{margin-bottom:12px;font-size:11px}
+  .fab{font-size:13px}
+  .fso{gap:8px}
+  .sb{width:36px;height:36px;font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="ann">Free Shipping above ₹499 <s>·</s> Use code <b>GLOW15</b> for 15% off <s>·</s> <span class="hide-mob">Cruelty Free &nbsp;✦&nbsp; Dermatologist Tested</span></div>
+
+<nav>
+  <div class="ni">
+    <a href="#" class="logo">
+      <div class="lm">
+        <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+          <ellipse cx="13" cy="10" rx="6" ry="6" stroke="white" stroke-width="1.8" fill="none" opacity="0.9"/>
+          <circle cx="13" cy="10" r="2.5" fill="rgba(255,255,255,0.9)"/>
+          <path d="M7 16 Q13 22 19 16" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/>
+          <path d="M18 5 Q22 8 19 13 Q16 8 18 5Z" fill="rgba(201,169,110,0.6)" stroke="rgba(201,169,110,0.8)" stroke-width="0.8"/>
+          <path d="M8 5 Q4 8 7 13 Q10 8 8 5Z" fill="rgba(168,212,232,0.45)" stroke="rgba(168,212,232,0.6)" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <div class="ltg">
+        <span class="ln">Everyday Skincare</span>
+        <span class="lt">Science Meets Skin</span>
+      </div>
+    </a>
+    <ul class="nl">
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#man">For Men</a></li>
+      <li><a href="#woman">For Women</a></li>
+      <li><a href="#baby">For Baby</a></li>
+      <li><a href="#ingr">Ingredients</a></li>
+      <li><a href="#abt">Our Story</a></li>
+    </ul>
+    <div class="na">
+      <button class="ib">🔍</button>
+      <button class="ib">👤</button>
+      <button class="cp">🛒 Cart (0)</button>
+    <button class="ham" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mob-menu" id="mobMenu"><a href="#shop" class="mm-link" onclick="closeMob()">Shop</a><a href="#man" class="mm-link" onclick="closeMob()">For Men</a><a href="#woman" class="mm-link" onclick="closeMob()">For Women</a><a href="#baby" class="mm-link" onclick="closeMob()">For Baby</a><a href="#ingr" class="mm-link" onclick="closeMob()">Ingredients</a><a href="#abt" class="mm-link" onclick="closeMob()">Our Story</a><button class="mob-cta" onclick="closeMob()">🛒 Cart (0)</button></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blob blob1"></div><div class="blob blob2"></div><div class="blob blob3"></div>
+  <div class="hi">
+    <div>
+      <div class="hbg"><span class="dot"></span>New 2025 Collection</div>
+      <h1 class="hh">
+        <span class="ld">Your Skin,</span>
+        <em class="lc">Beautifully</em>
+        <span class="ld">Cared For</span>
+      </h1>
+      <p class="hs">Formulated for every Indian skin tone and every stage of life. Clean, science-backed skincare for men, women, and babies — everyday.</p>
+      <div class="hc">
+        <a href="#shop" class="bg">Shop Now →</a>
+        <a href="#abt" class="bs">Our Story</a>
+      </div>
+      <div class="hst">
+        <div class="hst-i"><div class="n">4.8★</div><div class="l">Rating</div></div>
+        <div class="hst-i"><div class="n">2L+</div><div class="l">Customers</div></div>
+        <div class="hst-i"><div class="n">100%</div><div class="l">Natural Base</div></div>
+      </div>
+    </div>
+    <div class="hp">
+      <!-- Featured tall Man card -->
+      <div class="hpc tall">
+        <span class="hpbg">Bestseller</span>
+        <div class="hsvg">
+          <svg viewBox="0 0 120 190" fill="none" width="90">
+            <rect x="28" y="38" width="64" height="132" rx="14" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+            <rect x="42" y="22" width="36" height="20" rx="7" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.25)" stroke-width="1.2"/>
+            <rect x="38" y="10" width="44" height="16" rx="8" fill="rgba(201,169,110,0.92)"/>
+            <rect x="35" y="68" width="50" height="78" rx="7" fill="rgba(255,255,255,0.09)"/>
+            <text x="60" y="96" text-anchor="middle" fill="white" font-size="9" font-weight="600" opacity="0.95">EVERYDAY</text>
+            <text x="60" y="110" text-anchor="middle" fill="rgba(200,232,244,0.9)" font-size="7" letter-spacing="2.5">MAN</text>
+            <line x1="40" y1="120" x2="80" y2="120" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+            <text x="60" y="131" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="5.5">MOISTURISER SPF30</text>
+            <rect x="28" y="138" width="64" height="32" fill="rgba(168,212,232,0.1)"/>
+          </svg>
+        </div>
+        <div class="hcat">Everyday Man</div>
+        <div class="hnm">Power Boost<br>Moisturiser</div>
+        <div class="hpr">₹549</div>
+      </div>
+      <!-- Women card -->
+      <div class="hpc">
+        <span class="hpbg">New</span>
+        <div class="hsvg">
+          <svg viewBox="0 0 95 130" fill="none" width="68">
+            <rect x="22" y="33" width="51" height="82" rx="10" fill="#EDE0F8" stroke="#B090D0" stroke-width="1.5"/>
+            <rect x="33" y="18" width="29" height="18" rx="5" fill="#DDD0F0" stroke="#B090D0" stroke-width="1"/>
+            <rect x="40" y="6" width="15" height="15" rx="7.5" fill="#7B5EA7"/>
+            <rect x="28" y="52" width="39" height="52" rx="4" fill="rgba(123,94,167,0.08)"/>
+            <text x="47" y="72" text-anchor="middle" fill="#7B5EA7" font-size="7" font-weight="600">EVERYDAY</text>
+            <text x="47" y="84" text-anchor="middle" fill="#9B7EC8" font-size="5.5" letter-spacing="2">WOMEN</text>
+            <line x1="32" y1="91" x2="62" y2="91" stroke="#C0A0E0" stroke-width="0.8"/>
+            <text x="47" y="100" text-anchor="middle" fill="#B090C8" font-size="5">GLOW SERUM</text>
+          </svg>
+        </div>
+        <div class="hcat" style="color:#7B5EA7">Everyday Woman</div>
+        <div class="hnm" style="font-size:15px">Radiance Serum</div>
+        <div class="hpr" style="color:#7B5EA7">₹699</div>
+      </div>
+      <!-- Baby card -->
+      <div class="hpc">
+        <div class="hsvg">
+          <svg viewBox="0 0 95 130" fill="none" width="68">
+            <rect x="18" y="28" width="59" height="87" rx="14" fill="#D8F4EC" stroke="#5BB09A" stroke-width="1.5"/>
+            <rect x="32" y="13" width="31" height="18" rx="6" fill="#C8EDDF" stroke="#5BB09A" stroke-width="1"/>
+            <rect x="41" y="3" width="13" height="14" rx="6.5" fill="#3A8A72"/>
+            <path d="M73 22 L86 22 L86 29 L73 29" fill="#C9A96E"/>
+            <rect x="25" y="50" width="45" height="52" rx="4" fill="rgba(58,138,114,0.09)"/>
+            <text x="47" y="70" text-anchor="middle" font-size="12">⭐</text>
+            <text x="47" y="84" text-anchor="middle" fill="#3A8A72" font-size="7" font-weight="600">EVERYDAY</text>
+            <text x="47" y="96" text-anchor="middle" fill="#5BB09A" font-size="5.5" letter-spacing="2">BABY</text>
+          </svg>
+        </div>
+        <div class="hcat" style="color:#3A8A72">Everyday Baby</div>
+        <div class="hnm" style="font-size:15px">Gentle Wash</div>
+        <div class="hpr" style="color:#3A8A72">₹449</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq">
+  <div class="mqt">
+    <span class="mqi">Dermatologist Tested<span class="mqd"></span></span>
+    <span class="mqi">100% Vegan<span class="mqd"></span></span>
+    <span class="mqi">Cruelty Free<span class="mqd"></span></span>
+    <span class="mqi">No Parabens<span class="mqd"></span></span>
+    <span class="mqi">Made in India<span class="mqd"></span></span>
+    <span class="mqi">Clinically Proven<span class="mqd"></span></span>
+    <span class="mqi">Safe for Indian Skin<span class="mqd"></span></span>
+    <span class="mqi">Fragrance Transparent<span class="mqd"></span></span>
+    <span class="mqi">Dermatologist Tested<span class="mqd"></span></span>
+    <span class="mqi">100% Vegan<span class="mqd"></span></span>
+    <span class="mqi">Cruelty Free<span class="mqd"></span></span>
+    <span class="mqi">No Parabens<span class="mqd"></span></span>
+    <span class="mqi">Made in India<span class="mqd"></span></span>
+    <span class="mqi">Clinically Proven<span class="mqd"></span></span>
+    <span class="mqi">Safe for Indian Skin<span class="mqd"></span></span>
+    <span class="mqi">Fragrance Transparent<span class="mqd"></span></span>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="cats" id="shop">
+  <div class="sh fi">
+    <div class="st">Our Collections</div>
+    <h2 class="sti">Skincare for <em>Every Story</em></h2>
+    <p class="sd">Three distinct ranges crafted for three different journeys — because every skin tells a unique story.</p>
+  </div>
+  <div class="cg">
+
+    <!-- MAN -->
+    <div class="cc cm fi" id="man">
+      <div class="cim">
+        <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <defs>
+            <linearGradient id="mb" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#1A3D5C"/><stop offset="55%" style="stop-color:#2C5F8A"/><stop offset="100%" style="stop-color:#5A9AC0"/></linearGradient>
+            <radialGradient id="mg" cx="50%" cy="45%" r="40%"><stop offset="0%" style="stop-color:rgba(168,212,232,0.25)"/><stop offset="100%" style="stop-color:transparent"/></radialGradient>
+            <linearGradient id="ms" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B5E3C"/><stop offset="100%" style="stop-color:#6B4226"/></linearGradient>
+          </defs>
+          <rect width="400" height="600" fill="url(#mb)"/>
+          <rect width="400" height="600" fill="url(#mg)"/>
+          <circle cx="340" cy="80" r="80" fill="rgba(168,212,232,0.12)"/>
+          <circle cx="50" cy="500" r="60" fill="rgba(168,212,232,0.08)"/>
+          <rect x="132" y="312" width="136" height="200" rx="14" fill="#0d2a5e" opacity="0.85"/>
+          <path d="M162 312 L200 362 L238 312" fill="#0a1f4a" stroke="rgba(168,212,232,0.3)" stroke-width="1.2"/>
+          <rect x="184" y="272" width="32" height="48" rx="9" fill="url(#ms)"/>
+          <ellipse cx="200" cy="238" rx="60" ry="66" fill="url(#ms)"/>
+          <path d="M145 224 Q142 192 147 172 Q170 152 200 151 Q230 152 253 172 Q258 192 255 224" fill="#140800"/>
+          <ellipse cx="200" cy="163" rx="56" ry="22" fill="#140800"/>
+          <ellipse cx="180" cy="236" rx="8" ry="6.5" fill="#140800"/>
+          <ellipse cx="220" cy="236" rx="8" ry="6.5" fill="#140800"/>
+          <circle cx="182" cy="234" r="2.5" fill="rgba(255,255,255,0.55)"/>
+          <circle cx="222" cy="234" r="2.5" fill="rgba(255,255,255,0.55)"/>
+          <path d="M168 222 Q180 217 192 222" stroke="#140800" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M208 222 Q220 217 232 222" stroke="#140800" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M195 250 Q200 260 205 250" stroke="#5a3a20" stroke-width="1.5" fill="none"/>
+          <path d="M186 267 Q200 277 214 267" stroke="#5a3a20" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M162 268 Q180 280 200 278 Q220 280 238 268" stroke="rgba(26,10,0,0.25)" stroke-width="9" fill="none" stroke-linecap="round"/>
+          <path d="M132 322 Q110 364 116 414" stroke="url(#ms)" stroke-width="28" fill="none" stroke-linecap="round"/>
+          <path d="M268 322 Q290 364 284 414" stroke="url(#ms)" stroke-width="28" fill="none" stroke-linecap="round"/>
+          <rect x="271" y="390" width="26" height="44" rx="6" fill="rgba(255,255,255,0.85)"/>
+          <rect x="278" y="380" width="12" height="13" rx="3.5" fill="#C9A96E"/>
+          <text x="284" y="413" text-anchor="middle" fill="#2C5F8A" font-size="5.5" font-weight="700">ES</text>
+          <ellipse cx="200" cy="230" rx="74" ry="80" fill="none" stroke="rgba(168,212,232,0.18)" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="co">
+        <div class="cch">Collection</div>
+        <div class="cn">Everyday<br>Man</div>
+        <div class="cdc">Powerful formulas for men who take their skin seriously. Built tough, absorbed fast.</div>
+        <a href="#" class="cl">Explore Range →</a>
+      </div>
+    </div>
+
+    <!-- WOMAN -->
+    <div class="cc cw fi" id="woman">
+      <div class="cim">
+        <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <defs>
+            <linearGradient id="wb" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#3A1E58"/><stop offset="55%" style="stop-color:#7B5EA7"/><stop offset="100%" style="stop-color:#B090D0"/></linearGradient>
+            <radialGradient id="wg" cx="50%" cy="45%" r="40%"><stop offset="0%" style="stop-color:rgba(192,160,224,0.2)"/><stop offset="100%" style="stop-color:transparent"/></radialGradient>
+            <linearGradient id="ws" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#9B6B47"/><stop offset="100%" style="stop-color:#7A4E30"/></linearGradient>
+          </defs>
+          <rect width="400" height="600" fill="url(#wb)"/>
+          <rect width="400" height="600" fill="url(#wg)"/>
+          <circle cx="330" cy="100" r="90" fill="rgba(192,160,224,0.12)"/>
+          <circle cx="60" cy="480" r="70" fill="rgba(255,255,255,0.06)"/>
+          <path d="M122 342 Q100 400 112 530 Q155 568 200 568 Q245 568 288 530 Q300 400 278 342 Z" fill="#5A1A52" opacity="0.9"/>
+          <path d="M122 342 Q78 408 92 508" stroke="rgba(201,169,110,0.45)" stroke-width="2" fill="none"/>
+          <rect x="146" y="302" width="108" height="58" rx="10" fill="#4A1444"/>
+          <rect x="184" y="264" width="32" height="46" rx="9" fill="url(#ws)"/>
+          <ellipse cx="200" cy="228" rx="58" ry="64" fill="url(#ws)"/>
+          <path d="M148 198 Q134 252 140 355 Q162 362 176 340 Q178 302 180 238" fill="#0e0600"/>
+          <path d="M252 198 Q266 252 260 355 Q238 362 224 340 Q222 302 220 238" fill="#0e0600"/>
+          <path d="M148 188 Q174 168 200 166 Q226 168 252 188 Q255 168 252 154 Q226 140 200 140 Q174 140 148 154 Q145 168 148 188Z" fill="#0e0600"/>
+          <circle cx="218" cy="153" r="9" fill="#E070B0" opacity="0.85"/>
+          <circle cx="218" cy="153" r="5" fill="#FFA0D0"/>
+          <circle cx="200" cy="208" r="4.5" fill="#CC0033"/>
+          <ellipse cx="180" cy="226" rx="9" ry="7" fill="#0e0600"/>
+          <ellipse cx="220" cy="226" rx="9" ry="7" fill="#0e0600"/>
+          <path d="M168 224 Q180 219 192 224" stroke="#0e0600" stroke-width="2" fill="none"/>
+          <path d="M208 224 Q220 219 232 224" stroke="#0e0600" stroke-width="2" fill="none"/>
+          <circle cx="183" cy="224" r="2.5" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="223" cy="224" r="2.5" fill="rgba(255,255,255,0.5)"/>
+          <path d="M165 213 Q180 206 194 211" stroke="#0e0600" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <path d="M206 211 Q220 206 235 213" stroke="#0e0600" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+          <path d="M195 240 Q200 249 205 240" stroke="#6B3A20" stroke-width="1.4" fill="none"/>
+          <circle cx="194" cy="241" r="2.5" fill="#C9A96E"/>
+          <path d="M186 258 Q200 270 214 258" stroke="#7A1840" stroke-width="2.5" fill="none"/>
+          <circle cx="143" cy="238" r="5.5" fill="#C9A96E"/>
+          <path d="M143 244 L139 260 L143 265 L147 260 Z" fill="#C9A96E"/>
+          <circle cx="257" cy="238" r="5.5" fill="#C9A96E"/>
+          <path d="M257 244 L253 260 L257 265 L261 260 Z" fill="#C9A96E"/>
+          <path d="M146 312 Q119 357 123 417" stroke="url(#ws)" stroke-width="26" fill="none" stroke-linecap="round"/>
+          <path d="M254 312 Q281 357 277 417" stroke="url(#ws)" stroke-width="26" fill="none" stroke-linecap="round"/>
+          <path d="M113 402 Q122 396 131 402" stroke="#C9A96E" stroke-width="3" fill="none"/>
+          <path d="M112 408 Q122 402 132 408" stroke="#CC0033" stroke-width="2.5" fill="none"/>
+          <ellipse cx="200" cy="220" rx="72" ry="76" fill="none" stroke="rgba(192,160,224,0.18)" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="co">
+        <div class="cch">Collection</div>
+        <div class="cn">Everyday<br>Woman</div>
+        <div class="cdc">Radiance-boosting rituals for the modern Indian woman. Glow that speaks your culture.</div>
+        <a href="#" class="cl">Explore Range →</a>
+      </div>
+    </div>
+
+    <!-- BABY -->
+    <div class="cc cb fi" id="baby">
+      <div class="cim">
+        <svg viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <defs>
+            <linearGradient id="bb2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0E2E22"/><stop offset="55%" style="stop-color:#3A8A72"/><stop offset="100%" style="stop-color:#70C0A8"/></linearGradient>
+            <radialGradient id="bg2" cx="50%" cy="45%" r="40%"><stop offset="0%" style="stop-color:rgba(112,192,168,0.22)"/><stop offset="100%" style="stop-color:transparent"/></radialGradient>
+            <linearGradient id="bsk" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#C49A7A"/><stop offset="100%" style="stop-color:#A8795A"/></linearGradient>
+            <linearGradient id="msk" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8B5E3C"/><stop offset="100%" style="stop-color:#6B4226"/></linearGradient>
+          </defs>
+          <rect width="400" height="600" fill="url(#bb2)"/>
+          <rect width="400" height="600" fill="url(#bg2)"/>
+          <circle cx="340" cy="90" r="85" fill="rgba(112,192,168,0.12)"/>
+          <circle cx="60" cy="470" r="65" fill="rgba(255,255,255,0.06)"/>
+          <path d="M88 322 Q70 395 82 465" stroke="url(#msk)" stroke-width="32" fill="none" stroke-linecap="round"/>
+          <path d="M312 322 Q330 395 318 465" stroke="url(#msk)" stroke-width="32" fill="none" stroke-linecap="round"/>
+          <path d="M82 298 Q60 400 82 540 Q160 580 200 582 Q240 580 318 540 Q340 400 318 298 Q280 262 240 278 Q200 290 160 278 Q120 262 82 298Z" fill="#2a5545" opacity="0.65"/>
+          <ellipse cx="200" cy="405" rx="88" ry="96" fill="#e0f5ee" opacity="0.9"/>
+          <ellipse cx="200" cy="415" rx="76" ry="76" fill="#d0eeea"/>
+          <ellipse cx="200" cy="293" rx="56" ry="56" fill="url(#bsk)"/>
+          <ellipse cx="200" cy="246" rx="32" ry="14" fill="#1e0a00"/>
+          <path d="M175 256 Q197 244 218 256 Q196 238 175 256Z" fill="#140800"/>
+          <ellipse cx="183" cy="290" rx="8.5" ry="6.5" fill="#140800"/>
+          <ellipse cx="217" cy="290" rx="8.5" ry="6.5" fill="#140800"/>
+          <circle cx="186" cy="287" r="2.2" fill="rgba(255,255,255,0.65)"/>
+          <circle cx="220" cy="287" r="2.2" fill="rgba(255,255,255,0.65)"/>
+          <ellipse cx="165" cy="304" rx="15" ry="9" fill="rgba(255,160,140,0.38)"/>
+          <ellipse cx="235" cy="304" rx="15" ry="9" fill="rgba(255,160,140,0.38)"/>
+          <circle cx="200" cy="303" r="4.5" fill="rgba(140,82,44,0.35)"/>
+          <path d="M190 314 Q200 323 210 314" stroke="#9A6040" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="147" cy="296" rx="10" ry="14" fill="url(#bsk)"/>
+          <ellipse cx="253" cy="296" rx="10" ry="14" fill="url(#bsk)"/>
+          <path d="M118 398 Q160 376 200 374 Q240 376 282 398" stroke="rgba(255,255,255,0.4)" stroke-width="2" fill="none"/>
+          <path d="M112 428 Q160 406 200 404 Q240 406 288 428" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" fill="none"/>
+          <rect x="296" y="442" width="28" height="46" rx="9" fill="rgba(255,255,255,0.82)"/>
+          <rect x="305" y="431" width="10" height="15" rx="5" fill="#3A8A72"/>
+          <text x="100" y="200" font-size="18" opacity="0.35">✨</text>
+          <text x="302" y="180" font-size="15" opacity="0.3">⭐</text>
+          <ellipse cx="200" cy="287" rx="70" ry="70" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+          <ellipse cx="200" cy="287" rx="85" ry="85" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="co">
+        <div class="cch">Collection</div>
+        <div class="cn">Everyday<br>Baby</div>
+        <div class="cdc">Ultra-gentle formulas for your little one's precious skin. Hypoallergenic, tear-free, pure love.</div>
+        <a href="#" class="cl">Explore Range →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="feats">
+  <div class="fg">
+    <div class="fi2 fi"><div class="fic">🧬</div><div class="fit">Science-Backed</div><div class="fid">Every ingredient chosen with clinical research and dermatologist approval</div></div>
+    <div class="fi2 fi"><div class="fic">🌿</div><div class="fit">Clean & Natural</div><div class="fid">No parabens, sulfates, or harmful chemicals — just pure, effective ingredients</div></div>
+    <div class="fi2 fi"><div class="fic">🇮🇳</div><div class="fit">Made for Indian Skin</div><div class="fid">Formulated for diverse Indian skin tones, humidity, and climates</div></div>
+    <div class="fi2 fi"><div class="fic">🐰</div><div class="fit">Cruelty Free</div><div class="fid">PETA certified. 100% vegan. We never test on animals — ever</div></div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="prods" id="products">
+  <div class="sh fi">
+    <div class="st">Shop Products</div>
+    <h2 class="sti">Our <em>Best Sellers</em></h2>
+    <p class="sd">Products loved by thousands of Indian families. Proven results, honest ingredients.</p>
+  </div>
+  <div class="tabs">
+    <button class="tab active" onclick="fp('all',this)">All Products</button>
+    <button class="tab" onclick="fp('man',this)">Everyday Man</button>
+    <button class="tab" onclick="fp('woman',this)">Everyday Woman</button>
+    <button class="tab" onclick="fp('baby',this)">Everyday Baby</button>
+  </div>
+  <div class="pg" id="pg">
+    <!-- P1 Man -->
+    <div class="pc" data-cat="man"><div class="pbg bb">Best Seller</div><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#EEE8FF,#D6C8F8)"></div><svg viewBox="0 0 110 175" fill="none" width="84" style="position:relative;z-index:1"><rect x="23" y="28" width="64" height="128" rx="13" fill="#2C5F8A" opacity="0.92"/><rect x="38" y="14" width="34" height="18" rx="6" fill="#4A8DB5"/><rect x="36" y="4" width="38" height="14" rx="7" fill="#C9A96E"/><rect x="29" y="56" width="52" height="76" rx="6" fill="rgba(255,255,255,0.1)"/><text x="55" y="82" text-anchor="middle" fill="white" font-size="8" font-weight="600">EVERYDAY</text><text x="55" y="95" text-anchor="middle" fill="rgba(168,212,232,0.9)" font-size="6.5" letter-spacing="2">MAN</text><line x1="34" y1="104" x2="76" y2="104" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/><text x="55" y="115" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="5.5">FACE WASH</text></svg></div><div class="pb"><div class="ps">★★★★★</div><div class="pct" style="color:#2C5F8A">Everyday Man</div><div class="pn">Deep Clean Face Wash</div><div class="pd">Salicylic acid + charcoal for deep pore cleansing. Controls oil &amp; shine all day.</div><div class="pf"><div class="pp" style="color:#2C5F8A"><span class="o">₹499</span>₹399</div><button class="ab">+</button></div></div></div>
+    <!-- P2 Woman -->
+    <div class="pc" data-cat="woman"><div class="pbg bn">New</div><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#FFE8EE,#FFD0DC)"></div><svg viewBox="0 0 95 172" fill="none" width="74" style="position:relative;z-index:1"><rect x="19" y="33" width="57" height="120" rx="12" fill="#7B5EA7" opacity="0.92"/><rect x="31" y="18" width="33" height="18" rx="5" fill="#9B7EC8"/><rect x="38" y="7" width="19" height="15" rx="7.5" fill="#C9A96E"/><rect x="25" y="60" width="45" height="72" rx="5" fill="rgba(255,255,255,0.1)"/><text x="47" y="84" text-anchor="middle" fill="white" font-size="7.5" font-weight="600">EVERYDAY</text><text x="47" y="97" text-anchor="middle" fill="rgba(220,190,255,0.9)" font-size="6" letter-spacing="1.8">WOMEN</text><line x1="29" y1="106" x2="65" y2="106" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/><text x="47" y="117" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="5">VIT C SERUM</text></svg></div><div class="pb"><div class="ps">★★★★★</div><div class="pct" style="color:#7B5EA7">Everyday Woman</div><div class="pn">Vitamin C Brightening Serum</div><div class="pd">15% Vitamin C + Turmeric extract. Fade dark spots, reveal inner glow.</div><div class="pf"><div class="pp" style="color:#7B5EA7">₹699</div><button class="ab" style="background:linear-gradient(135deg,#7B5EA7,#9B7EC8)">+</button></div></div></div>
+    <!-- P3 Baby -->
+    <div class="pc" data-cat="baby"><div class="pbg bb">Best Seller</div><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#D8F8EE,#B8EED8)"></div><svg viewBox="0 0 105 178" fill="none" width="80" style="position:relative;z-index:1"><rect x="18" y="36" width="69" height="124" rx="16" fill="#3A8A72" opacity="0.92"/><rect x="33" y="20" width="39" height="20" rx="7" fill="#5BB09A"/><rect x="40" y="7" width="25" height="17" rx="8.5" fill="#C9A96E"/><path d="M65 20 L80 20 L80 28 L65 28" fill="#C9A96E"/><rect x="26" y="68" width="53" height="68" rx="5" fill="rgba(255,255,255,0.12)"/><text x="52" y="90" text-anchor="middle" font-size="13">👶</text><text x="52" y="106" text-anchor="middle" fill="white" font-size="7.5" font-weight="600">EVERYDAY</text><text x="52" y="118" text-anchor="middle" fill="rgba(160,232,216,0.9)" font-size="6" letter-spacing="1.5">BABY</text><line x1="30" y1="127" x2="74" y2="127" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/><text x="52" y="137" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="5">GENTLE LOTION</text></svg></div><div class="pb"><div class="ps">★★★★★</div><div class="pct" style="color:#3A8A72">Everyday Baby</div><div class="pn">Gentle Body Lotion</div><div class="pd">Calendula + Coconut milk. Ultra-gentle, pediatrician tested. No tears, all love.</div><div class="pf"><div class="pp" style="color:#3A8A72">₹449</div><button class="ab" style="background:linear-gradient(135deg,#3A8A72,#5BB09A)">+</button></div></div></div>
+    <!-- P4 Man -->
+    <div class="pc" data-cat="man"><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#D8ECFF,#BCDAFF)"></div><svg viewBox="0 0 110 172" fill="none" width="82" style="position:relative;z-index:1"><rect x="16" y="26" width="78" height="128" rx="14" fill="#2C5F8A" opacity="0.88"/><rect x="38" y="10" width="34" height="20" rx="6" fill="#4A8DB5"/><rect x="46" y="1" width="18" height="13" rx="6.5" fill="#C9A96E"/><path d="M64 10 L82 10 L82 19 L64 19" fill="#C9A96E"/><rect x="23" y="54" width="64" height="76" rx="5" fill="rgba(255,255,255,0.1)"/><text x="55" y="80" text-anchor="middle" fill="white" font-size="8" font-weight="600">EVERYDAY</text><text x="55" y="93" text-anchor="middle" fill="rgba(168,212,232,0.9)" font-size="6.5" letter-spacing="2">MAN</text><line x1="28" y1="102" x2="82" y2="102" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/><text x="55" y="113" text-anchor="middle" fill="rgba(255,255,255,0.48)" font-size="5.5">SPF 50 SUNSCREEN</text></svg></div><div class="pb"><div class="ps">★★★★☆</div><div class="pct" style="color:#2C5F8A">Everyday Man</div><div class="pn">SPF 50+ Sunscreen</div><div class="pd">Invisible matte finish. PA++++ broad spectrum protection. Won't clog pores.</div><div class="pf"><div class="pp" style="color:#2C5F8A">₹549</div><button class="ab">+</button></div></div></div>
+    <!-- P5 Woman -->
+    <div class="pc" data-cat="woman"><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#FFF0D0,#FFE4A8)"></div><svg viewBox="0 0 110 165" fill="none" width="82" style="position:relative;z-index:1"><ellipse cx="55" cy="136" rx="46" ry="17" fill="#7B5EA7" opacity="0.55"/><rect x="12" y="76" width="86" height="62" rx="11" fill="#7B5EA7" opacity="0.92"/><ellipse cx="55" cy="76" rx="43" ry="17" fill="#9B7EC8"/><ellipse cx="55" cy="76" rx="36" ry="13" fill="#B098D8"/><rect x="20" y="86" width="70" height="42" rx="5" fill="rgba(255,255,255,0.1)"/><text x="55" y="106" text-anchor="middle" fill="white" font-size="7.5" font-weight="600">EVERYDAY</text><text x="55" y="118" text-anchor="middle" fill="rgba(220,190,255,0.9)" font-size="6" letter-spacing="1.5">WOMEN</text><text x="55" y="127" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="5">NIGHT CREAM</text></svg></div><div class="pb"><div class="ps">★★★★★</div><div class="pct" style="color:#7B5EA7">Everyday Woman</div><div class="pn">Retinol Night Repair Cream</div><div class="pd">0.3% Retinol + Saffron. Wake up to visibly younger-looking, firmer skin.</div><div class="pf"><div class="pp" style="color:#7B5EA7"><span class="o">₹899</span>₹749</div><button class="ab" style="background:linear-gradient(135deg,#7B5EA7,#9B7EC8)">+</button></div></div></div>
+    <!-- P6 Baby -->
+    <div class="pc" data-cat="baby"><div class="pbg bn">New</div><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#C8F4E4,#A4E8CC)"></div><svg viewBox="0 0 106 178" fill="none" width="80" style="position:relative;z-index:1"><rect x="23" y="34" width="60" height="126" rx="14" fill="#3A8A72" opacity="0.92"/><rect x="36" y="17" width="34" height="21" rx="7" fill="#5BB09A"/><rect x="43" y="5" width="20" height="16" rx="8" fill="#C9A96E"/><path d="M63 17 L80 17 L80 26 L63 26" fill="#C9A96E"/><rect x="30" y="65" width="46" height="68" rx="5" fill="rgba(255,255,255,0.12)"/><text x="53" y="86" text-anchor="middle" font-size="12">🌸</text><text x="53" y="102" text-anchor="middle" fill="white" font-size="7.5" font-weight="600">EVERYDAY</text><text x="53" y="114" text-anchor="middle" fill="rgba(160,232,216,0.9)" font-size="6" letter-spacing="1.5">BABY</text><line x1="34" y1="122" x2="72" y2="122" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/><text x="53" y="132" text-anchor="middle" fill="rgba(255,255,255,0.48)" font-size="5">HAIR + BODY WASH</text></svg></div><div class="pb"><div class="ps">★★★★★</div><div class="pct" style="color:#3A8A72">Everyday Baby</div><div class="pn">2-in-1 Hair &amp; Body Wash</div><div class="pd">Tear-free. Oat milk + Rose extract. Cleanse and nourish in one gentle step.</div><div class="pf"><div class="pp" style="color:#3A8A72">₹499</div><button class="ab" style="background:linear-gradient(135deg,#3A8A72,#5BB09A)">+</button></div></div></div>
+    <!-- P7 Man -->
+    <div class="pc" data-cat="man"><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#E0EEFF,#C4D8FF)"></div><svg viewBox="0 0 106 168" fill="none" width="80" style="position:relative;z-index:1"><rect x="21" y="26" width="64" height="124" rx="12" fill="#1A3D5C" opacity="0.92"/><rect x="36" y="12" width="34" height="18" rx="6" fill="#2C5F8A"/><rect x="34" y="3" width="38" height="13" rx="6.5" fill="#C9A96E"/><rect x="28" y="54" width="50" height="72" rx="5" fill="rgba(255,255,255,0.1)"/><text x="53" y="79" text-anchor="middle" fill="white" font-size="8" font-weight="600">EVERYDAY</text><text x="53" y="92" text-anchor="middle" fill="rgba(168,212,232,0.9)" font-size="6" letter-spacing="2">MAN</text><line x1="32" y1="100" x2="74" y2="100" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/><text x="53" y="111" text-anchor="middle" fill="rgba(255,255,255,0.48)" font-size="5">UNDER EYE CREAM</text></svg></div><div class="pb"><div class="ps">★★★★☆</div><div class="pct" style="color:#2C5F8A">Everyday Man</div><div class="pn">Dark Circle Eye Cream</div><div class="pd">Caffeine + Kojic acid. De-puff, brighten, and awaken tired eyes in 2 weeks.</div><div class="pf"><div class="pp" style="color:#2C5F8A">₹599</div><button class="ab">+</button></div></div></div>
+    <!-- P8 Woman -->
+    <div class="pc" data-cat="woman"><div class="pbg bsl">20% Off</div><div class="pi"><div class="pib" style="background:linear-gradient(145deg,#FFE4EE,#FFD0E0)"></div><svg viewBox="0 0 96 168" fill="none" width="72" style="position:relative;z-index:1"><rect x="16" y="28" width="64" height="122" rx="14" fill="#7B5EA7" opacity="0.92"/><rect x="32" y="13" width="32" height="19" rx="5.5" fill="#9B7EC8"/><rect x="30" y="3" width="36" height="14" rx="7" fill="#C9A96E"/><rect x="22" y="56" width="52" height="70" rx="5" fill="rgba(255,255,255,0.1)"/><text x="48" y="80" text-anchor="middle" fill="white" font-size="7.5" font-weight="600">EVERYDAY</text><text x="48" y="93" text-anchor="middle" fill="rgba(220,190,255,0.9)" font-size="5.8" letter-spacing="1.5">WOMEN</text><line x1="26" y1="101" x2="70" y2="101" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/><text x="48" y="112" text-anchor="middle" fill="rgba(255,255,255,0.48)" font-size="5">ROSE TONER 200ml</text></svg></div><div class="pb"><div class="ps">★★★★★</div><div class="pct" style="color:#7B5EA7">Everyday Woman</div><div class="pn">Rose Petal Hydrating Toner</div><div class="pd">Bulgarian rose water + Niacinamide. Balance pH, shrink pores, glass-skin glow.</div><div class="pf"><div class="pp" style="color:#7B5EA7"><span class="o">₹499</span>₹399</div><button class="ab" style="background:linear-gradient(135deg,#7B5EA7,#9B7EC8)">+</button></div></div></div>
+  </div>
+  <div style="text-align:center;margin-top:56px"><a href="#" class="bg">View All Products →</a></div>
+</section>
+
+<!-- INGREDIENTS -->
+<section class="ingr" id="ingr">
+  <div class="ii">
+    <div>
+      <div class="sh" style="text-align:left;margin-bottom:32px">
+        <div class="st" style="justify-content:flex-start">Our Ingredients</div>
+        <h2 class="sti" style="text-align:left">What Goes <em>On</em> Your<br>Skin Matters</h2>
+        <p class="sd" style="text-align:left;margin:0">We believe in radical transparency — every ingredient carefully chosen, ethically sourced, and clinically validated.</p>
+      </div>
+      <div class="il">
+        <div class="iitem fi"><div class="iic">🌿</div><div><div class="inn">Turmeric Extract (Curcumin)</div><div class="ind">Ancient Indian wisdom meets modern science. Anti-inflammatory, brightening, and antioxidant-rich — perfect for Indian skin.</div></div></div>
+        <div class="iitem fi"><div class="iic">🌸</div><div><div class="inn">Saffron (Kesar)</div><div class="ind">India's liquid gold. Fades hyperpigmentation, evens skin tone, and delivers a natural luminosity no synthetic can replicate.</div></div></div>
+        <div class="iitem fi"><div class="iic">🥥</div><div><div class="inn">Virgin Coconut Oil</div><div class="ind">Cold-pressed, unrefined. Deep moisturizing, anti-microbial, rich in lauric acid — a skin barrier superhero.</div></div></div>
+        <div class="iitem fi"><div class="iic">🌱</div><div><div class="inn">Niacinamide B3</div><div class="ind">Minimizes pores, controls oil, brightens dark spots, and strengthens the skin barrier — proven in 200+ clinical studies.</div></div></div>
+      </div>
+      <a href="#" class="bg">See All Ingredients →</a>
+    </div>
+    <div class="fi" style="display:flex;justify-content:center">
+      <svg viewBox="0 0 480 520" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%">
+        <defs>
+          <radialGradient id="ic" cx="50%" cy="50%" r="50%"><stop offset="0%" style="stop-color:#C8E8F4"/><stop offset="100%" style="stop-color:#E8F5FC"/></radialGradient>
+          <linearGradient id="ib2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#2C5F8A"/><stop offset="100%" style="stop-color:#7BB8D4"/></linearGradient>
+        </defs>
+        <circle cx="240" cy="260" r="220" fill="url(#ic)" opacity="0.6"/>
+        <circle cx="240" cy="260" r="188" fill="none" stroke="#4A8DB5" stroke-width="0.5" stroke-dasharray="8 8" opacity="0.25"/>
+        <circle cx="240" cy="260" r="152" fill="none" stroke="#4A8DB5" stroke-width="0.5" opacity="0.15"/>
+        <rect x="168" y="130" width="144" height="258" rx="20" fill="white" filter="drop-shadow(0 16px 40px rgba(44,95,138,0.14))"/>
+        <rect x="192" y="154" width="96" height="176" rx="12" fill="url(#ib2)"/>
+        <rect x="208" y="138" width="64" height="22" rx="6" fill="#4A8DB5"/>
+        <rect x="210" y="126" width="60" height="17" rx="8.5" fill="#C9A96E"/>
+        <rect x="198" y="174" width="84" height="116" rx="6" fill="rgba(255,255,255,0.1)"/>
+        <text x="240" y="206" text-anchor="middle" fill="white" font-size="11" font-weight="600">EVERYDAY</text>
+        <text x="240" y="222" text-anchor="middle" fill="rgba(200,232,244,0.9)" font-size="8.5" letter-spacing="3">SKINCARE</text>
+        <line x1="202" y1="236" x2="278" y2="236" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+        <text x="240" y="252" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-size="7">COMPLETE RANGE</text>
+        <text x="240" y="295" text-anchor="middle" fill="#C9A96E" font-size="7">✦ PURE · HONEST · EFFECTIVE ✦</text>
+        <text x="240" y="372" text-anchor="middle" fill="#2C5F8A" font-size="14" font-weight="700">₹449 – ₹799</text>
+        <text x="240" y="390" text-anchor="middle" fill="#7A9AAA" font-size="9.5">Free Shipping Above ₹499</text>
+        <circle cx="98" cy="158" r="52" fill="rgba(255,247,220,0.9)" stroke="#C9A96E" stroke-width="1.5"/>
+        <text x="98" y="150" text-anchor="middle" font-size="22">🌿</text>
+        <text x="98" y="168" text-anchor="middle" fill="#7A6000" font-size="9" font-weight="700">Turmeric</text>
+        <text x="98" y="182" text-anchor="middle" fill="#8A8060" font-size="7">Brightening</text>
+        <circle cx="388" cy="153" r="46" fill="rgba(240,220,255,0.9)" stroke="#B090D0" stroke-width="1.5"/>
+        <text x="388" y="146" text-anchor="middle" font-size="20">🌸</text>
+        <text x="388" y="163" text-anchor="middle" fill="#6A3090" font-size="9" font-weight="700">Saffron</text>
+        <text x="388" y="177" text-anchor="middle" fill="#9A70A0" font-size="7">Luminosity</text>
+        <circle cx="92" cy="378" r="50" fill="rgba(220,245,238,0.9)" stroke="#5BB09A" stroke-width="1.5"/>
+        <text x="92" y="370" text-anchor="middle" font-size="22">🥥</text>
+        <text x="92" y="388" text-anchor="middle" fill="#1A5A3A" font-size="9" font-weight="700">Coconut</text>
+        <text x="92" y="402" text-anchor="middle" fill="#5A8A6A" font-size="7">Moisturising</text>
+        <circle cx="384" cy="368" r="50" fill="rgba(220,235,255,0.9)" stroke="#4A8DB5" stroke-width="1.5"/>
+        <text x="384" y="358" text-anchor="middle" fill="#2C5F8A" font-size="13" font-weight="800">B3</text>
+        <text x="384" y="376" text-anchor="middle" fill="#2C5F8A" font-size="8" font-weight="700">Niacinamide</text>
+        <text x="384" y="390" text-anchor="middle" fill="#5A80AA" font-size="7">Pore Refining</text>
+        <line x1="148" y1="168" x2="192" y2="210" stroke="#C9A96E" stroke-width="1" stroke-dasharray="4 4" opacity="0.35"/>
+        <line x1="340" y1="160" x2="288" y2="202" stroke="#B090D0" stroke-width="1" stroke-dasharray="4 4" opacity="0.35"/>
+        <line x1="140" y1="368" x2="192" y2="340" stroke="#5BB09A" stroke-width="1" stroke-dasharray="4 4" opacity="0.35"/>
+        <line x1="336" y1="366" x2="288" y2="330" stroke="#4A8DB5" stroke-width="1" stroke-dasharray="4 4" opacity="0.35"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="test">
+  <div class="torb to1"></div><div class="torb to2"></div>
+  <div class="sh fi">
+    <div class="st">Real Stories</div>
+    <h2 class="sti">Loved Across <em>India</em></h2>
+    <p class="sd">From Delhi to Chennai, Mumbai to Kolkata — real people, real results, real confidence.</p>
+  </div>
+  <div class="tg">
+    <div class="tc fi"><div class="tst">★★★★★</div><div class="tt">"I've struggled with oily, acne-prone skin for years. The Everyday Man face wash transformed my skin completely in just 3 weeks. My colleagues keep asking what's different!"</div><div class="ta"><div class="tav"><svg viewBox="0 0 50 50" width="50" height="50"><rect width="50" height="50" fill="#2C5F8A"/><ellipse cx="25" cy="22" rx="12" ry="13" fill="#8B5E3C"/><path d="M14 22 Q13 18 14 15 Q20 10 25 10 Q30 10 36 15 Q37 18 36 22" fill="#1a0800"/><ellipse cx="25" cy="50" rx="18" ry="14" fill="#2C5F8A" opacity="0.8"/><path d="M15 35 Q20 45 25 46 Q30 45 35 35" fill="#8B5E3C"/></svg></div><div><div class="tname">Arjun Sharma</div><div class="tloc">Mumbai, Maharashtra</div><div class="tver">✓ Verified Purchase</div></div></div></div>
+    <div class="tc fi"><div class="tst">★★★★★</div><div class="tt">"As a South Indian woman, I have warm, dusky skin and finding the right products was always a challenge. The Vitamin C serum has evened my tone beautifully. I feel so confident now!"</div><div class="ta"><div class="tav"><svg viewBox="0 0 50 50" width="50" height="50"><rect width="50" height="50" fill="#7B5EA7"/><ellipse cx="25" cy="22" rx="12" ry="13" fill="#9B6B47"/><path d="M13 22 Q13 14 16 12 Q20 8 25 8 Q30 8 34 12 Q37 14 37 22" fill="#0e0600"/><ellipse cx="25" cy="50" rx="18" ry="14" fill="#7B5EA7" opacity="0.8"/><circle cx="33" cy="16" r="3" fill="#CC0033"/></svg></div><div><div class="tname">Priya Venkatesh</div><div class="tloc">Chennai, Tamil Nadu</div><div class="tver">✓ Verified Purchase</div></div></div></div>
+    <div class="tc fi"><div class="tst">★★★★★</div><div class="tt">"My 8-month-old has very sensitive skin and I was so worried. Everyday Baby gentle wash is an absolute miracle. No rashes, no irritation, just happy baby skin!"</div><div class="ta"><div class="tav"><svg viewBox="0 0 50 50" width="50" height="50"><rect width="50" height="50" fill="#3A8A72"/><ellipse cx="25" cy="22" rx="11" ry="12" fill="#C49A7A"/><path d="M14 22 Q14 14 18 11 Q22 7 25 7 Q28 7 32 11 Q36 14 36 22" fill="#0e0600"/><ellipse cx="25" cy="50" rx="18" ry="14" fill="#3A8A72" opacity="0.8"/></svg></div><div><div class="tname">Kavitha Reddy</div><div class="tloc">Hyderabad, Telangana</div><div class="tver">✓ Verified Purchase</div></div></div></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="abt" id="abt">
+  <div class="avi fi">
+    <svg viewBox="0 0 460 520" xmlns="http://www.w3.org/2000/svg" width="100%">
+      <defs>
+        <linearGradient id="abg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#D4ECF7"/><stop offset="100%" style="stop-color:#EAF5FC"/></linearGradient>
+        <linearGradient id="abs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#B0845A"/><stop offset="100%" style="stop-color:#8B6040"/></linearGradient>
+      </defs>
+      <rect width="460" height="520" rx="28" fill="url(#abg)"/>
+      <circle cx="60" cy="80" r="42" fill="rgba(74,141,181,0.08)"/><circle cx="400" cy="100" r="58" fill="rgba(44,95,138,0.05)"/><circle cx="80" cy="440" r="50" fill="rgba(201,169,110,0.08)"/><circle cx="380" cy="440" r="35" fill="rgba(123,184,212,0.1)"/>
+      <ellipse cx="180" cy="198" rx="52" ry="57" fill="url(#abs)"/>
+      <path d="M132 174 Q130 154 135 138 Q158 124 180 121 Q202 124 225 138 Q230 154 228 174" fill="#0e0600"/>
+      <path d="M132 178 Q124 210 127 250" fill="#0e0600"/>
+      <path d="M228 178 Q236 210 233 250" fill="#0e0600"/>
+      <rect x="128" y="256" width="104" height="148" rx="10" fill="white" opacity="0.92"/>
+      <circle cx="155" cy="279" r="10" fill="#2C5F8A"/>
+      <text x="155" y="283" text-anchor="middle" fill="white" font-size="7" font-weight="700">ES</text>
+      <rect x="167" y="244" width="26" height="20" rx="5" fill="url(#abs)"/>
+      <ellipse cx="165" cy="196" rx="7" ry="6" fill="#0e0600"/><ellipse cx="195" cy="196" rx="7" ry="6" fill="#0e0600"/>
+      <circle cx="167" cy="194" r="2" fill="rgba(255,255,255,0.5)"/><circle cx="197" cy="194" r="2" fill="rgba(255,255,255,0.5)"/>
+      <circle cx="180" cy="181" r="3.5" fill="#CC0033"/>
+      <path d="M155 183 Q165 178 176 182" stroke="#0e0600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M184 182 Q195 178 205 183" stroke="#0e0600" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M168 220 Q180 230 192 220" stroke="#7A1840" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <rect x="224" y="298" width="28" height="50" rx="7" fill="#2C5F8A"/>
+      <rect x="232" y="287" width="12" height="15" rx="4" fill="#C9A96E"/>
+      <text x="238" y="322" text-anchor="middle" fill="white" font-size="5.5" font-weight="700">ES</text>
+      <ellipse cx="318" cy="308" rx="40" ry="43" fill="#7A4E30"/>
+      <path d="M282 288 Q280 274 285 261 Q298 250 318 248 Q338 250 352 261 Q356 274 354 288" fill="#0e0600"/>
+      <rect x="278" y="352" width="80" height="108" rx="8" fill="#2C5F8A" opacity="0.72"/>
+      <rect x="304" y="342" width="28" height="18" rx="4" fill="#7A4E30"/>
+      <rect x="28" y="298" width="36" height="62" rx="8" fill="#3A8A72" opacity="0.88"/>
+      <text x="46" y="333" text-anchor="middle" fill="white" font-size="7" font-weight="600">ES</text>
+      <text x="46" y="345" text-anchor="middle" fill="rgba(160,232,216,0.8)" font-size="4.5">BABY</text>
+      <rect x="28" y="216" width="36" height="62" rx="8" fill="#7B5EA7" opacity="0.88"/>
+      <text x="46" y="251" text-anchor="middle" fill="white" font-size="7" font-weight="600">ES</text>
+      <text x="46" y="263" text-anchor="middle" fill="rgba(220,190,255,0.8)" font-size="4.5">WOMEN</text>
+      <rect x="72" y="440" width="316" height="54" rx="14" fill="rgba(44,95,138,0.08)" stroke="rgba(74,141,181,0.2)" stroke-width="1"/>
+      <text x="230" y="462" text-anchor="middle" fill="#2C5F8A" font-size="12.5" font-weight="600">"Honest Skincare for Every Indian"</text>
+      <text x="230" y="480" text-anchor="middle" fill="#7A9AAA" font-size="9">Founded in Hyderabad, 2020</text>
+      <line x1="28" y1="28" x2="432" y2="28" stroke="rgba(74,141,181,0.15)" stroke-width="1"/>
+      <line x1="28" y1="492" x2="432" y2="492" stroke="rgba(74,141,181,0.15)" stroke-width="1"/>
+    </svg>
+  </div>
+  <div class="fi">
+    <div class="sh" style="text-align:left;margin-bottom:28px">
+      <div class="st" style="justify-content:flex-start">Our Story</div>
+      <h2 class="sti" style="text-align:left">Born in India,<br><em>For India</em></h2>
+    </div>
+    <p class="ap">Everyday Skincare was founded with one simple belief: skincare should be honest, effective, and made for real Indian skin — not a Western formula repurposed for our diverse melanin-rich complexions.</p>
+    <p class="ap">Our team of Indian dermatologists and cosmetic chemists spent years researching the unique needs of Indian skin — from the humidity of Mumbai to the dry air of Delhi, from dusky South Indian tones to fair North Indian complexions.</p>
+    <p class="ap">Every formula starts with ancient Indian botanical wisdom — turmeric, saffron, neem, coconut — enhanced with modern active ingredients, giving you the best of both worlds.</p>
+    <div class="avl">
+      <div class="av"><div class="vn">50+</div><div class="vl">Products</div></div>
+      <div class="av"><div class="vn">2L+</div><div class="vl">Customers</div></div>
+      <div class="av"><div class="vn">4.8★</div><div class="vl">Rating</div></div>
+      <div class="av"><div class="vn">0%</div><div class="vl">Harmful</div></div>
+    </div>
+    <a href="#" class="bg">Read Our Story →</a>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="nl2">
+  <h2>Get <em>Glowing</em> Updates</h2>
+  <p>New launches, skincare tips, exclusive offers — straight to your inbox</p>
+  <form class="nlf" onsubmit="return false">
+    <input type="email" placeholder="Your email address">
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="fg2">
+    <div class="fba">
+      <a href="#" class="logo" style="text-decoration:none">
+        <div class="lm"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><ellipse cx="13" cy="10" rx="6" ry="6" stroke="white" stroke-width="1.8" fill="none" opacity="0.9"/><circle cx="13" cy="10" r="2.5" fill="rgba(255,255,255,0.9)"/><path d="M7 16 Q13 22 19 16" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.8"/><path d="M18 5 Q22 8 19 13 Q16 8 18 5Z" fill="rgba(201,169,110,0.6)" stroke="rgba(201,169,110,0.8)" stroke-width="0.8"/></svg></div>
+        <div class="ltg"><span class="ln">Everyday Skincare</span><span class="lt">Science Meets Skin</span></div>
+      </a>
+      <p class="fab">India's most trusted skincare brand for men, women, and babies. Honest ingredients, real results, every day.</p>
+      <div class="fso">
+        <a href="#" class="sb">📸</a><a href="#" class="sb">📘</a><a href="#" class="sb">🐦</a><a href="#" class="sb">▶️</a><a href="#" class="sb">📌</a>
+      </div>
+    </div>
+    <div class="fc"><h4>Shop</h4><ul><li><a href="#">Everyday Man</a></li><li><a href="#">Everyday Woman</a></li><li><a href="#">Everyday Baby</a></li><li><a href="#">Best Sellers</a></li><li><a href="#">New Arrivals</a></li><li><a href="#">Gift Sets</a></li></ul></div>
+    <div class="fc"><h4>Help</h4><ul><li><a href="#">Skin Quiz</a></li><li><a href="#">Ingredients</a></li><li><a href="#">Shipping &amp; Returns</a></li><li><a href="#">Track Order</a></li><li><a href="#">FAQs</a></li><li><a href="#">Contact Us</a></li></ul></div>
+    <div class="fc"><h4>Company</h4><ul><li><a href="#">Our Story</a></li><li><a href="#">Science</a></li><li><a href="#">Sustainability</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Affiliates</a></li></ul></div>
+  </div>
+  <div class="fbt">
+    <span>© 2025 Everyday Skincare Pvt. Ltd. All rights reserved. Made with ❤️ in India.</span>
+    <div><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs=new IntersectionObserver(e=>{e.forEach((el,i)=>{if(el.isIntersecting){setTimeout(()=>el.target.classList.add('vis'),(el.target.dataset.d||0)*90);obs.unobserve(el.target)}})},{threshold:0.1});
+document.querySelectorAll('.fi').forEach((el,i)=>{el.dataset.d=i%5;obs.observe(el)});
+
+// Product tabs filter
+function fp(cat,btn){document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.pc').forEach(c=>{const s=cat==='all'||c.dataset.cat===cat;c.style.display=s?'block':'none';if(s)c.style.animation='rise .5s ease both'})}
+
+// Add to cart
+document.querySelectorAll('.ab').forEach(b=>{b.addEventListener('click',function(){const o=this.textContent;this.textContent='✓';this.style.background='linear-gradient(135deg,#28a745,#3cb85c)';this.style.transform='scale(1.18)';setTimeout(()=>{this.textContent=o;this.style.background='';this.style.transform=''},1600)})});
+
+// Hamburger menu
+const hamBtn=document.getElementById('hamBtn');
+const mobMenu=document.getElementById('mobMenu');
+function closeMob(){mobMenu.classList.remove('open');hamBtn.classList.remove('open');document.body.style.overflow='';}
+hamBtn&&hamBtn.addEventListener('click',()=>{const open=mobMenu.classList.toggle('open');hamBtn.classList.toggle('open');document.body.style.overflow=open?'hidden':'';});
+// Close on outside click
+mobMenu&&mobMenu.addEventListener('click',e=>{if(e.target===mobMenu)closeMob();});
+// Close on escape
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMob();});
+
+// Touch-friendly: prevent zoom on double-tap buttons
+document.querySelectorAll('.bg,.bs,.tab,.ab,.cp,.mob-cta').forEach(el=>{el.addEventListener('touchend',e=>{e.preventDefault();el.click();});});
+</script>
+</body>
+</html>
